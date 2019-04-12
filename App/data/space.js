@@ -1,20 +1,20 @@
 const questions = [
   {
-    question: "What is the fifth planet from the sun?",
+    question: "П'ята планета від сонця?",
     answers: [
-      { id: "1", text: "Mars" },
-      { id: "2", text: "Jupiter", correct: true },
-      { id: "3", text: "Saturn" },
-      { id: "4", text: "Venus" }
+      { id: "1", text: "Марс" },
+      { id: "2", text: "Юпітер", correct: true },
+      { id: "3", text: "Сатурн" },
+      { id: "4", text: "Венера" }
     ]
   },
   {
-    question: "Which number is 3",
+    question: "Яка країна перша запустила супутник",
     answers: [
-      { id: "1", text: "1" },
-      { id: "2", text: "3", correct: true },
-      { id: "3", text: "2" },
-      { id: "4", text: "4" }
+      { id: "1", text: "США" },
+      { id: "2", text: "СРСР", correct: true },
+      { id: "3", text: "Велика Британія" },
+      { id: "4", text: "Іспанія" }
     ]
   }
 ];

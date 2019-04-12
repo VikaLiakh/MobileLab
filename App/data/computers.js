@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "Which number is 3",
+    question: "Який номер відповідає трійці",
     answers: [
       { id: "1", text: "1" },
       { id: "2", text: "3", correct: true },
@@ -9,7 +9,7 @@ const questions = [
     ]
   },
   {
-    question: "What is the capitalized version of a?",
+    question: "Вибрати велику літеру a?",
     answers: [
       { id: "1", text: "D" },
       { id: "2", text: "C" },

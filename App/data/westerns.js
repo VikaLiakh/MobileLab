@@ -1,21 +1,21 @@
 const questions = [
   {
     question:
-      "In the Roy Rogers -Dale Evans Museum, you will find Roy and Dales stuffed horses. Roy's horse was named Trigger, which was Dales horse?",
+      "Діамантова рука-це?",
     answers: [
-      { id: "1", text: "Buttermilk", correct: true },
-      { id: "2", text: "Daisy" },
-      { id: "3", text: "Scout" },
-      { id: "4", text: "Tulip" }
+      { id: "1", text: "Комедія", correct: true },
+      { id: "2", text: "Вестерн" },
+      { id: "3", text: "Детектив" },
+      { id: "4", text: "Драма" }
     ]
   },
   {
-    question: "Which number is 3",
+    question: "Де був відкритий перший у світі кінотеатр",
     answers: [
-      { id: "1", text: "1" },
-      { id: "2", text: "3", correct: true },
-      { id: "3", text: "2" },
-      { id: "4", text: "4" }
+      { id: "1", text: "Берлін" },
+      { id: "2", text: "Париж", correct: true },
+      { id: "3", text: "Лондон" },
+      { id: "4", text: "Лісабон" }
     ]
   }
 ];

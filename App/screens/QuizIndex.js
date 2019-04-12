@@ -11,35 +11,35 @@ export default ({ navigation }) => (
     <StatusBar barStyle="dark-content" />
     <ScrollView style={{ flex: 1 }}>
       <RowItem
-        name="Space"
+        name="Космос"
         color="#36B1F0"
         onPress={() =>
           navigation.navigate("Quiz", {
             color: "#36B1F0",
             questions: spaceQuestions,
-            title: "Space"
+            title: "Космос"
           })
         }
       />
       <RowItem
-        name="Westerns"
+        name="Кіно"
         color="#799496"
         onPress={() =>
           navigation.navigate("Quiz", {
             color: "#799496",
             questions: westernQuestions,
-            title: "Westerns"
+            title: "Кіно"
           })
         }
       />
       <RowItem
-        name="Computers"
+        name="Наука"
         color="#49475B"
         onPress={() =>
           navigation.navigate("Quiz", {
             color: "#49475B",
             questions: computerQuestions,
-            title: "Computers"
+            title: "Наука"
           })
         }
       />
