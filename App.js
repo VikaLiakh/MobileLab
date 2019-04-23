@@ -1,59 +1,84 @@
-import React, { Component} from 'react';
-import { AppRegistry,Alert, Text, TextInput,StyleSheet,FlatList,Button,View } from 'react-native';
+import React, { Component } from 'react';
+import { Text, StatusBar, TextInput, View, StyleSheet } from 'react-native';
+import { Constants } from 'expo';
 
-
-export default class PizzaTranslator extends Component {
-  constructor(probs){
-    super(probs);
-    this.state = {text: ''};
-  }
+export default class App extends Component {
+  state = {
+    name: '',
+    email: '',
+  };
   
   render() {
     return (
-      <View style={{padding: 40}}>
-        <TextInput style={{heigt: 10}}
-        placeholder="Type here to translate!"
-        onChangeText={(text) => this.setState({text})} />
-        <Text style={{padding:10, fontSize: 42}}>
-        {this.state.text.split(' ').map ((word) => word && '🍕').join(' ')}
-        </Text>
-        <FlatList
-          data={[
-            {key: 'Pizza'},
-            {key: 'Pizza'},
-            {key: 'Pizza'},
-            {key: 'Pizza'},
-            {key: 'Pizza'},
-            {key: 'Pizza'},
-            {key: 'Pizza'},
-            {key: 'Pizza'},
-          ]}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
+        <View style={styles.header}>
+          <Text style={styles.description}>
+ 
+          </Text>
+        </View>
+        <TextInput
+          style={styles.input}
+          value={this.state.name}
+          onChangeText={name => this.setState({name})}
+          ref={ref => {this._nameInput = ref}}
+          placeholder="Full Name"
+          autoFocus={true}
+          autoCapitalize="words"
+          autoCorrect={true}
+          keyboardType="default"
+          returnKeyType="next"
+          onSubmitEditing={this._next}
+          blurOnSubmit={false}
         />
-       <Button
-  onPress={() => {
-    Alert.alert('You tapped the button!');
-  }}
-  title="Press Me"
-/>
-  
+        <TextInput
+          style={styles.input}
+          value={this.state.email}
+          onChangeText={email => this.setState({email})}
+          ref={ref => {this._emailInput = ref}}
+          placeholder="email@example.com"
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyboardType="email-address"
+          returnKeyType="send"
+          onSubmitEditing={this._submit}
+          blurOnSubmit={true}
+        />
       </View>
     );
   }
+  
+  _next = () => {
+    this._emailInput && this._emailInput.focus();
+  };
+  
+  _submit = () => {
+    alert(`Ласкаво Просимо, ${this.state.name}! Для перевірки особи Вам надіслано повідомлення на адресу ${this.state.email}, перейдіть для підтверження авторизації`);
+  };
 }
-AppRegistry.registerComponent('FirstApp', ()=>PizzaTranslator);
-
 
 const styles = StyleSheet.create({
   container: {
-   flex: 1,
-   paddingTop: 22
+    flex: 1,
+    backgroundColor: '#ecf0f1',
   },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
+  header: {
+    paddingTop: 20 + Constants.statusBarHeight,
+    padding: 20,
+    backgroundColor: '#336699',
   },
-})
-
-
+  description: {
+    fontSize: 14,
+    color: 'white',
+  },
+  input: {
+    margin: 20,
+    marginBottom: 0,
+    height: 34,
+    paddingHorizontal: 10,
+    borderRadius: 4,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    fontSize: 16,
+  },
+});
