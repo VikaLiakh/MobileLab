@@ -31,7 +31,7 @@ class GreetingPage extends Component {
 					fontFamily: "ChalkboardSE-Bold",
 					color: '#004d99'
 				}}>
-					Hi, how can I call you?
+				Привіт, як до вас можна звертатись?
 				</Text>
 				<FormInput 
 					inputStyle={{ 		

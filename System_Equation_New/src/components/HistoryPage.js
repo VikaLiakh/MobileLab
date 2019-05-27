@@ -43,7 +43,7 @@ class HistoryPage extends Component {
 					fontFamily: "ChalkboardSE-Light",
 					color: '#004d99'
 				}}>
-					Hi {this.props.name}, below is your system equation solving history:
+					Привіт {this.props.name}, нижче наведено історію розв'язків твоїх рівнянь:
 				</Text>
 				{//<Text>{this.props.xyConsts[0] === undefined ? null : this.props.xyConsts[0].const1}</Text>
 				//{/* same as <Text>{this.props.xyConsts[0] && this.props.xyConsts[0].const1}</Text>, and this is the simplified version*/}
